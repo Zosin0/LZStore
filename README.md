@@ -33,3 +33,8 @@ $ ng g s services/product
 $ ng g s services/auth
 $ ng g s services/cart
 ```
+---
+- Criação de Interfaces
+```
+>ng g i Produtos
+```

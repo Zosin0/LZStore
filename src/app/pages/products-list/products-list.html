@@ -1,1 +1,9 @@
-<p>products-list works!</p>
+<h2>Nossos produtos</h2>
+
+<ul>
+     <li *ngFor="let produto of produtos">
+      <h3>{{ produto.title }}</h3>
+      <p>Preço: {{ produto.price | currency: 'BRL' }}</p>
+      <img [src]="produto.image" alt="{{ produto.title }}" width="100">
+    </li>
+</ul>
