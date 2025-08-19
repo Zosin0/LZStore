@@ -10,7 +10,7 @@ import { ProductDetail } from './pages/product-detail/product-detail';
 
 export const routes: Routes = [
   {path: 'home', component: ProductsList},
-  {path: 'produtos', component: ProductsList},
+  {path: 'products', component: ProductsList},
   {path: 'product/:id', component: ProductDetail }
 
 ];

@@ -2,10 +2,11 @@ import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Product } from '../../services/product'; // Service
 import { CommonModule } from '@angular/common';
+import { ProductCard } from '../../components/product-card/product-card';
 
 @Component({
   selector: 'app-products-list',
-  imports: [CommonModule],
+  imports: [CommonModule, ProductCard ],
   templateUrl: './products-list.html',
   styleUrl: './products-list.scss'
 })
