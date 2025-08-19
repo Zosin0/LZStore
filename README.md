@@ -23,6 +23,7 @@ $ ng g c components/header
 $ ng g c components/product-card
 $ ng g c pages/products-list
 $ ng g c pages/product-detail
+$ ng g c pages/home
 $ ng g c pages/login
 $ ng g c pages/cart
 ```
