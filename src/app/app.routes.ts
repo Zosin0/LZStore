@@ -8,10 +8,14 @@ import { ProductCard } from './components/product-card/product-card';
 import { ProductsList } from './pages/products-list/products-list';
 import { ProductDetail } from './pages/product-detail/product-detail';
 import { Home } from './pages/home/home';
+import { Login } from './pages/login/login';
+import { authGuard } from './guards/auth.guard';
+
 
 export const routes: Routes = [
   {path: '', component: Home },
-  {path: 'products', component: ProductsList},
-  {path: 'product/:id', component: ProductDetail }
+  {path: 'products', component: ProductsList, canActivate: [authGuard] },
+  {path: 'product/:id', component: ProductDetail, canActivate: [authGuard]},
+  {path: 'login', component: Login }
 
 ];

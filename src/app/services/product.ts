@@ -11,12 +11,11 @@ export class Product {
   private http = inject(HttpClient)
   private apiUrl = 'https://fakestoreapi.com/products'
 
-  // Todos os produtos
-  getProducts(): Observable<Produto[]>{
-    return this.http.get<Produto[]>(this.apiUrl)
+  getProducts(limit: number = 8): Observable<Produto[]> {
+    const url = `${this.apiUrl}?limit=${limit}`;
+    return this.http.get<Produto[]>(url);
   }
 
-  // Por ID
   getProductById(id: number): Observable<Produto> {
     return this.http.get<Produto>(`${this.apiUrl}/${id}`)
   }

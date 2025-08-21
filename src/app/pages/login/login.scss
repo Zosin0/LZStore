@@ -1,0 +1,95 @@
+$off-white: #f4f4f4;
+$dark-text: #1a1a1a;
+$card-bg: #ffffff;
+$primary-font: 'Poppins', sans-serif;
+
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: $off-white;
+  font-family: $primary-font;
+}
+
+.login-box {
+  background-color: $card-bg;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
+  color: $dark-text;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+
+  label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    color: $dark-text;
+    opacity: 0.7;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    font-size: 1rem;
+    font-family: $primary-font;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $dark-text;
+    }
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: $dark-text;
+  color: $off-white;
+  border: none;
+  border-radius: 4px;
+  font-family: $primary-font;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover:not(:disabled) {
+    background-color: lighten($dark-text, 10%);
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.error-message {
+  color: #d9534f;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}

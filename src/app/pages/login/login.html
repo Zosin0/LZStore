@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div class="login-container">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-box">
+    <h2 class="title">ACESSAR CONTA</h2>
+
+    <div class="form-group">
+      <label for="username">USUÁRIO</label>
+      <input id="username" type="text" formControlName="username" placeholder="Digite seu usuário">
+    </div>
+
+    <div class="form-group">
+      <label for="password">SENHA</label>
+      <input id="password" type="password" formControlName="password" placeholder="Digite sua senha">
+    </div>
+
+    <button type="submit" [disabled]="!loginForm.valid" class="submit-btn">ENTRAR</button>
+
+    <p *ngIf="loginError" class="error-message">{{ loginError }}</p>
+  </form>
+</div>

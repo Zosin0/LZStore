@@ -1,9 +1,9 @@
-<h1>LZS</h1>
-<h2 class="loja-title">Nossos produtos</h2>
-
 <ul>
   <app-product-card
     *ngFor="let produto of produtos"
     [product]="produto">
     </app-product-card>
+    <div class="load-more-container">
+  <button class="load-more-button" (click)="loadMore()">Carregar Mais</button>
+  </div>
 </ul>
